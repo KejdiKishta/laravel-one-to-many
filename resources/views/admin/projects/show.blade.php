@@ -3,7 +3,8 @@
 @section('content')
     <div class="container p-5">
         <h1>{{ $project->title }}</h1>
-        <p class="text-secondary">owner: {{ $project->owner }}</p>
+        <h4>Type: {{ $project->type?->name }}</h4>
+        <p class="text-secondary">Owner: {{ $project->owner }}</p>
         <hr class="my-3">
         <p>{{ $project->description }}</p>
     </div>
