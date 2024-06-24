@@ -18,6 +18,15 @@
             </div>
 
             <div class="form-group py-3">
+                <label for="type">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" {{ old('type_id', isset($project) ? $project->type_id : '') == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group py-3">
                 <label for="owner">Owner</label>
                 <input type="text" class="form-control @error('owner') is-invalid @enderror" id="owner"
                     name="owner" value="{{ old('owner', $project->owner) }}">
