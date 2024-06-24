@@ -23,6 +23,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Owner</th>
                     <th scope="col">Description</th>
                     <th scope="col">Utility</th>
@@ -34,6 +35,7 @@
                         {{-- <a href="{{ route('admin.projects.show', ['project' => $item->slug]) }}"> --}}
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $item->title }}</td>
+                            <td>{{ $item->type?->name }}</td>
                             <td>{{ $item->owner }}</td>
                             <td>{{ $item->description }}</td>
                             <td class="text-nowrap">
